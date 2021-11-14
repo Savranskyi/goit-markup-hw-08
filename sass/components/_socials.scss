@@ -1,0 +1,33 @@
+.socials {
+  @include centredFlex;
+  margin-top: 16px;
+
+  &__item {
+    fill: currentColor;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    @include centredFlex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $icons-color;
+    background-color: transparent;
+    transition: fill $transition-duration $transition-function,
+      background-color $transition-duration $transition-function;
+
+    &--footer {
+      fill: $general-white;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    &:hover,
+    &:focus {
+      fill: $general-white;
+      background-color: $accent-color;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// UTILS
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/breakpoints';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+// BASE
+@import './base/reset';
+
+// COMPONENTS
+@import './components/container';
+@import './components/logo';
+@import './components/header-site-navigation';
+@import './components/header-contacts';
+@import './components/section-title';
+@import './components/buttons';
+@import './components/backdrop';
+@import './components/form';
+@import './components/socials';
+@import './components/footer_address';
+@import './components/footer-socials';
+@import './components/footer-subscribe';
+
+// LAYOUT
+@import './layout/page-header';
+@import './layout/hero';
+@import './layout/advantages';
+@import './layout/what-we-do';
+@import './layout/teammates';
+@import './layout/clients';
+@import './layout/filter';
+@import './layout/portfolio';
+@import './layout/page-footer';

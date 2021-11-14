@@ -1,0 +1,17 @@
+.address {
+  margin-top: 20px;
+  font-style: normal;
+
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .address__link {
+    color: $footer-contacts-color;
+    transition: color $transition-duration $transition-function;
+
+    &:hover,
+    &:focus {
+      color: $general-white;
+    }
+  }
+}

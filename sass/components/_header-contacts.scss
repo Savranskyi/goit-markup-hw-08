@@ -1,0 +1,29 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+
+  &__item {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @include centredFlex;
+    font-weight: 500;
+    color: inherit;
+    transition: color $transition-duration $transition-function,
+      fill $transition-duration $transition-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: currentColor;
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
