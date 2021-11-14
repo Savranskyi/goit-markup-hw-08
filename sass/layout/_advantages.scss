@@ -1,8 +1,6 @@
 .advantages {
   @media screen and (min-width: $tablet) {
-    margin: -15px;
-    display: flex;
-    flex-wrap: wrap;
+    @include marginWrap;
   }
 }
 .advantages__item {

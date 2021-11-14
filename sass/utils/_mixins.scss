@@ -3,3 +3,8 @@
   align-items: center;
   justify-content: center;
 }
+@mixin marginWrap {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}

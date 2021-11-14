@@ -1,5 +1,5 @@
 .clients {
-  @extend %marginWrap;
+  @include marginWrap;
 }
 .clients__item {
   margin: 15px;

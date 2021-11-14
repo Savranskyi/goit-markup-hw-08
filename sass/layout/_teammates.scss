@@ -3,9 +3,7 @@
 }
 .teammate {
   @media screen and (min-width: $tablet) {
-    margin: -15px;
-    display: flex;
-    flex-wrap: wrap;
+    @include marginWrap;
   }
 }
 .teammate__item {
