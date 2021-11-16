@@ -1,62 +1,47 @@
 .subscribe {
-  margin-left: 93px;
-
-  .subscribe__title {
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: $general-white;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
   }
-  .subscribe__input {
-    padding-left: 16px;
+}
+.subscribe__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $general-white;
+}
+.subscribe__input {
+  padding-left: 16px;
+
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: $primary-background-color;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border $transition-duration $transition-function;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  @media screen and (max-width: ($tablet - 1)) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1)) {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
     width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: $primary-background-color;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    transition: border $transition-duration $transition-function;
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
-
-    &:focus {
-      border: 1px solid $accent-color;
-      outline: none;
-    }
   }
-
-  .subscribe__button {
-    @include centredFlex($type: inline-flex);
-    margin-left: 12px;
-    padding: 10px 28px 10px 29px;
-    min-width: 200px;
-    background-color: $accent-color;
-    border-style: none;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-    font-family: $primary-text-font;
-    color: $general-white;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-
-    transition: background-color $transition-duration $transition-function;
-
-    &:hover,
-    &:focus {
-      cursor: pointer;
-      color: $general-white;
-      background-color: $button-hover-color;
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
-    }
+  &:focus {
+    border: 1px solid $accent-color;
+    outline: none;
   }
+}
 
-  .subscribe__icon {
-    margin-left: 10px;
-  }
+.subscribe__icon {
+  margin-left: 10px;
 }

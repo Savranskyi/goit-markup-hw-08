@@ -1,5 +1,7 @@
 .footer-socials {
-  margin-left: 70px;
+  @media screen and (max-width: ($desktop - 1)) {
+    margin-bottom: 60px;
+  }
 
   .footer-socials__title {
     margin-bottom: 20px;

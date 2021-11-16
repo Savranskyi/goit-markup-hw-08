@@ -3,6 +3,27 @@
   align-items: center;
   justify-content: center;
 }
+@mixin button(
+  $pad,
+  $fw: 700,
+  $lh: 1.87,
+  $bs: 0px 4px 4px rgba(0, 0, 0, 0.15),
+  $clr: $general-white,
+  $bc: $accent-color
+) {
+  padding: $pad;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-weight: $fw;
+  font-size: 16px;
+  line-height: $lh;
+  letter-spacing: 0.06em;
+  color: $clr;
+  background-color: $bc;
+  box-shadow: $bs;
+}
+
 @mixin marginWrap {
   margin: -15px;
   display: flex;
