@@ -1,9 +1,20 @@
 .site-navigation {
-  @include centredFlex;
+  display: flex;
+  @media screen and (min-width: $tablet) {
+    @include centredFlex;
+  }
 }
 .site-navigation__list {
-  display: flex;
-  margin-left: 93px;
+  @media screen and (max-width: ($tablet - 1)) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 .site-navigation__item:not(:last-child) {
   margin-right: 50px;

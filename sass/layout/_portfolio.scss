@@ -5,6 +5,14 @@
 }
 .portfolio__item {
   margin: 15px;
+  @media screen and (min-width: $tablet) {
+    margin: 15px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
 }
 // &__item:not(:nth-child(3n)) {
 //   margin-right: 30px;
@@ -60,9 +68,16 @@
   line-height: 2;
   letter-spacing: 0.06em;
   color: $primary-text-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .portfolio__description {
   font-size: 16px;
   line-height: 1.87;
   color: $secondary-text-color;
+  &--stretch {
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1)) {
+      margin-bottom: 36px;
+    }
+  }
 }

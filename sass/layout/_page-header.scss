@@ -1,6 +1,8 @@
 .header {
   border-bottom: 1px solid #ececec;
-  .container {
+}
+.header .container {
+  @media screen and (min-width: $tablet) {
     @include centredFlex;
   }
 }

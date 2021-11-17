@@ -1,29 +1,25 @@
 .hero {
-  // max-width: 1600px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 118px 0;
   text-align: center;
   align-items: center;
-  min-width: 100%;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $primary-background-color;
-
-  @media screen and (max-width: ($tablet - 1)) {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero/hero-mobile.jpg');
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/hero/hero-mobile.jpg');
-
-    @media screen and (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url('../images/hero/hero-mobile@2x.jpg');
-    }
+      url('../images/hero/hero-mobile@2x.jpg');
   }
-  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1)) {
+  @media screen and (min-width: ($mobile + 1)) {
+    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-tablet.jpg');
 
@@ -35,11 +31,8 @@
         url('../images/hero/hero-tablet@2x.jpg');
     }
   }
-
-  @media screen and (min-width: $desktop) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-
+  @media screen and (min-width: ($tablet + 1)) {
+    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-desktop.jpg');
 
@@ -50,6 +43,11 @@
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/hero/hero-desktop@2x.jpg');
     }
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
   }
 }
 
