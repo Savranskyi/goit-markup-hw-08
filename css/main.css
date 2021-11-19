@@ -740,16 +740,16 @@ button {
   fill: #2196f3;
 }
 
+.menu-button.is-open {
+  position: fixed;
+}
+
 .menu-button .icon-cross {
   display: none;
 }
 
 .menu-button.is-open .icon-cross {
   display: block;
-}
-
-.logo .menu-button.is-open {
-  display: none;
 }
 
 .menu-button.is-open .icon-menu {
