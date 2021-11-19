@@ -1,7 +1,7 @@
 .menu-button {
   display: inline-block;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   right: 15px;
   top: 10px;
   padding: 0;
@@ -32,15 +32,15 @@
 .menu-container {
   padding: 48px 40px;
   @media screen and (max-width: ($tablet - 1)) {
-    background-color: $general-white;
-
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     transform: translateY(-100%);
     transition: transform $transition-duration $transition-function;
+    background-color: $general-white;
     &.is-open {
       display: flex;
       flex-direction: column;
