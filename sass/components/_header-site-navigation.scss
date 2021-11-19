@@ -1,12 +1,13 @@
 .site-navigation {
   display: flex;
   @media screen and (min-width: $tablet) {
+    flex-grow: 1;
     @include centredFlex;
   }
 }
 .site-navigation__list {
   @media screen and (max-width: ($tablet - 1)) {
-    display: none;
+    margin-bottom: auto;
   }
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -16,38 +17,63 @@
     margin-left: 93px;
   }
 }
-.site-navigation__item:not(:last-child) {
-  margin-right: 50px;
+.site-navigation__item {
+  @media screen and (max-width: ($tablet - 1)) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 50px;
+    }
+  }
 }
 .site-navigation__link {
-  position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  line-height: 1.14;
+  text-align: center;
   letter-spacing: 0.02em;
   color: $primary-text-color;
   transition: color $transition-duration $transition-function;
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $accent-color;
-    opacity: 0;
-    transform: scaleX(0);
-    transition: transform $transition-duration $transition-function,
-      opacity $transition-duration $transition-function;
+  @media screen and (max-width: ($tablet - 1)) {
+    font-size: 40px;
+    line-height: 1.17;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
-  &:hover,
-  &:focus {
-    color: $accent-color;
+
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: 1.14;
     &::before {
-      opacity: 1;
-      transform: scaleX(1);
+      content: '';
+      position: absolute;
+      bottom: 9px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: transform $transition-duration $transition-function,
+        opacity $transition-duration $transition-function;
+      @media screen and (min-width: $desktop) {
+        bottom: 0;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      &::before {
+        opacity: 1;
+        transform: scaleX(1);
+      }
     }
   }
 }
@@ -55,13 +81,18 @@
   color: $accent-color;
 
   &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    bottom: 0;
-    border-radius: 2px;
-    background: $accent-color;
+    @media screen and (min-width: $tablet) {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      bottom: 9px;
+      border-radius: 2px;
+      background: $accent-color;
+      @media screen and (min-width: $desktop) {
+        bottom: 0px;
+      }
+    }
   }
 }

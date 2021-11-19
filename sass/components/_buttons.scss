@@ -9,6 +9,8 @@
 }
 
 .send-button {
+  display: block;
+  margin: 0 auto;
   @include button($pad: 10px 55px);
   transition: background-color $transition-duration $transition-function;
 

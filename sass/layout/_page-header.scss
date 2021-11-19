@@ -1,8 +1,10 @@
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 .header .container {
+  display: flex;
   @media screen and (min-width: $tablet) {
-    @include centredFlex;
+    @include alignFlex;
   }
 }

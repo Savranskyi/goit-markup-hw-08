@@ -3,6 +3,10 @@
   align-items: center;
   justify-content: center;
 }
+@mixin alignFlex {
+  display: flex;
+  align-items: center;
+}
 @mixin button(
   $pad,
   $fw: 700,

@@ -5,52 +5,54 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* width: 100%;
-  height: 100%; */
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity $transition-duration $transition-function;
-
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    & .modal {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
 }
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  min-width: 95%;
   background-color: $general-white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform $transition-duration $transition-function;
-
-  &__close-button {
-    @include centredFlex;
-    position: absolute;
-    margin: 0;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: $general-white;
-    fill: $primary-text-color;
-
-    transition: fill $transition-duration $transition-function;
+  @media screen and (min-width: $mobile) {
+    min-width: 450px;
   }
-  &__close-button:hover &__close-icon,
-  &__close-button:focus &__close-icon {
-    fill: $accent-color;
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
   }
+}
+.modal__close-button {
+  @include centredFlex;
+  position: absolute;
+  margin: 0;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $general-white;
+  fill: $primary-text-color;
+
+  transition: fill $transition-duration $transition-function;
+}
+.modal__close-button:hover .modal __close-icon,
+.modal__close-button:focus .modal __close-icon {
+  fill: $accent-color;
 }

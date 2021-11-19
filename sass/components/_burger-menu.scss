@@ -1,0 +1,93 @@
+.menu-button {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 10px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.logo .menu-button.is-open {
+  display: none;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  padding: 48px 40px;
+  @media screen and (max-width: ($tablet - 1)) {
+    background-color: $general-white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: transform $transition-duration $transition-function;
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include centredFlex;
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+  }
+}
+.burger-links {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.burger-links__list {
+  display: flex;
+}
+.burger-links__item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.burger-links__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  color: $accent-color;
+
+  position: relative;
+}
+.burger-links__link {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    top: 10px;
+    margin-right: 10px;
+  }
+}
