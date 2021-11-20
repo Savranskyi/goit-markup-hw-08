@@ -1,7 +1,9 @@
 .address {
   margin-top: 20px;
   font-style: normal;
-  @media screen and (max-width: ($desktop - 1)) {
+}
+.address__list {
+  @media screen and (max-width: ($tablet - 1)) {
     margin-bottom: 60px;
   }
   .address__item:not(:last-child) {

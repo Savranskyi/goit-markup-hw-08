@@ -1,9 +1,9 @@
 .section__what-we-do {
   @media screen and (max-width: 1199px) {
     display: none;
-    padding-top: 0;
   }
   @media screen and (min-width: $desktop) {
+    padding-top: 0;
     .what-we-do {
       display: flex;
     }

@@ -2,10 +2,15 @@
   font-family: $secondary-text-font;
   font-weight: 700;
   color: $accent-color;
-
-  @media screen and (max-width: ($desktop - 1)) {
+  padding: 26px 0;
+  @media screen and (max-width: ($tablet - 1)) {
     padding: 16px 0;
     font-size: 24px;
+    line-height: 1.38;
+  }
+  @media screen and (min-width: $tablet) {
+    padding: 24px 0;
+    font-size: 26px;
     line-height: 1.17;
   }
   @media screen and (min-width: $desktop) {
@@ -23,7 +28,4 @@
   .footer & {
     padding: 0;
   }
-}
-.menu-button.is-open .logo {
-  display: none;
 }
