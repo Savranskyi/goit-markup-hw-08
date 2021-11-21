@@ -69,6 +69,7 @@
 }
 .burger-links__list {
   display: flex;
+  flex-wrap: wrap;
 }
 .burger-links__item {
   &:not(:last-child) {
@@ -86,6 +87,4 @@
   letter-spacing: 0.02em;
 
   color: $accent-color;
-
-  position: relative;
 }
