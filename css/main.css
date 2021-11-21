@@ -1135,6 +1135,12 @@ button {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .advantages__title {
+    text-align: center;
+  }
+}
+
 .advantages__picture {
   display: -webkit-box;
   display: -ms-flexbox;
