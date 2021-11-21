@@ -18,10 +18,8 @@
       url('../images/hero/hero-mobile@2x.jpg');
   }
   @media screen and (min-width: ($mobile + 1)) {
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-tablet.jpg');
-
     @media screen and (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -31,10 +29,8 @@
     }
   }
   @media screen and (min-width: ($tablet + 1)) {
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../images/hero/hero-desktop.jpg');
-
     @media screen and (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -46,7 +42,6 @@
   @media screen and (min-width: $desktop) {
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1600px;
   }
 }
 
