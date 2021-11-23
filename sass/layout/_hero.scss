@@ -55,7 +55,7 @@
   font-size: 26px;
   line-height: 1.62;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $mobile) {
     width: 360px;
   }
   @media screen and (min-width: $desktop) {

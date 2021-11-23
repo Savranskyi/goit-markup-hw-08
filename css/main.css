@@ -118,6 +118,7 @@ button {
 
 .footer .logo {
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .site-navigation {
@@ -878,7 +879,6 @@ button {
 }
 
 .address {
-  margin-top: 20px;
   font-style: normal;
 }
 
@@ -1079,7 +1079,7 @@ button {
   line-height: 1.62;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .hero__title {
     width: 360px;
   }
