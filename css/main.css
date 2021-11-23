@@ -1449,6 +1449,12 @@ button {
   padding: 20px 24px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__thumb {
+    padding-bottom: 36px;
+  }
+}
+
 .portfolio__title {
   font-weight: 700;
   font-size: 18px;
@@ -1463,12 +1469,6 @@ button {
   font-size: 16px;
   line-height: 1.87;
   color: #757575;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .portfolio__description--stretch {
-    margin-bottom: 36px;
-  }
 }
 
 .footer {

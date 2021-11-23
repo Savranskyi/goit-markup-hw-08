@@ -60,6 +60,9 @@
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px 24px;
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1)) {
+    padding-bottom: 36px;
+  }
 }
 
 .portfolio__title {
@@ -75,9 +78,4 @@
   font-size: 16px;
   line-height: 1.87;
   color: $secondary-text-color;
-  &--stretch {
-    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1)) {
-      margin-bottom: 36px;
-    }
-  }
 }
