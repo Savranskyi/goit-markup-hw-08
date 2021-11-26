@@ -7,17 +7,10 @@ footer .container {
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
   }
   @media screen and (max-width: ($desktop - 1)) {
     justify-content: space-around;
     text-align: center;
-  }
-  @media screen and (min-width: $desktop) {
-    align-items: baseline;
-  }
-}
-.footer__address {
-  @media screen and (min-width: $desktop) {
-    flex-grow: 1;
   }
 }

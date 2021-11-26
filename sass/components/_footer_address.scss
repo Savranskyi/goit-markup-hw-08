@@ -1,20 +1,24 @@
-.address {
-  font-style: normal;
-}
-.address__list {
+.footer__address {
   @media screen and (max-width: ($tablet - 1)) {
     margin-bottom: 60px;
   }
-  .address__item:not(:last-child) {
+  @media screen and (min-width: $desktop) {
+    flex-grow: 1;
+  }
+}
+.address {
+  font-style: inherit;
+}
+.address__item {
+  &:not(:last-child) {
     margin-bottom: 9px;
   }
-  .address__link {
-    color: $footer-contacts-color;
-    transition: color $transition-duration $transition-function;
-
-    &:hover,
-    &:focus {
-      color: $general-white;
-    }
+}
+.address__link {
+  color: $footer-contacts-color;
+  transition: color $transition-duration $transition-function;
+  &:hover,
+  &:focus {
+    color: $general-white;
   }
 }
